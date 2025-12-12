@@ -27,15 +27,38 @@ function getThumbnail() {
     const sdRes = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
     const hqRes = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
-    // Update DOM elements
-    document.getElementById('img-max').src = maxRes;
-    document.getElementById('btn-max').href = maxRes;
+    // Elements
+    const imgMax = document.getElementById('img-max');
+    const btnMax = document.getElementById('btn-max');
+    const imgSd = document.getElementById('img-sd');
+    const btnSd = document.getElementById('btn-sd');
+    const imgHq = document.getElementById('img-hq');
+    const btnHq = document.getElementById('btn-hq');
 
-    document.getElementById('img-sd').src = sdRes;
-    document.getElementById('btn-sd').href = sdRes;
+    // 1. Try to load HD. If it fails (404), fallback to HQ automatically
+    imgMax.onload = function() {
+        // Image loaded successfully, ensure button is correct
+        btnMax.href = maxRes;
+        btnMax.innerText = "Download HD";
+    };
+    
+    imgMax.onerror = function() {
+        // HD failed, switch to HQ
+        this.src = hqRes;
+        btnMax.href = hqRes;
+        btnMax.innerText = "Download HQ (HD Unavailable)";
+    };
+    
+    // Trigger load
+    imgMax.src = maxRes;
+    btnMax.href = maxRes; // Default link
 
-    document.getElementById('img-hq').src = hqRes;
-    document.getElementById('btn-hq').href = hqRes;
+    // 2. Load SD and HQ normally
+    imgSd.src = sdRes;
+    btnSd.href = sdRes;
+
+    imgHq.src = hqRes;
+    btnHq.href = hqRes;
 
     // Show Results
     resultArea.classList.remove('hidden');
