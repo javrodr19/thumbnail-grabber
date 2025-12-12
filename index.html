@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>YouTube Thumbnail Grabber | Download HD Thumbnails Instantly</title>
+    <meta name="description" content="Free tool to download YouTube video thumbnails in HD, SD, and HQ. Fast, free, and works on mobile and desktop. No registration required.">
+    <meta name="keywords" content="youtube thumbnail downloader, thumbnail grabber, save youtube image, get video cover, youtube seo tool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourusername.github.io/repo-name/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/repo-name/">
+    <meta property="og:title" content="YouTube Thumbnail Grabber - Download HD Images">
+    <meta property="og:description" content="Extract high-quality thumbnails from any YouTube video instantly. Dark mode enabled.">
+    <meta property="og:image" content="https://yourusername.github.io/repo-name/assets/social-share.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>YT<span>Grabber</span></h1>
+            <nav>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="ad-container">
+        <div class="ad-placeholder">Advertisement Space</div>
+    </div>
+
+    <main class="container">
+        <section class="tool-section">
+            <h2>Download YouTube Thumbnails</h2>
+            <p>Paste the video URL below to extract high-quality images.</p>
+            
+            <div class="input-group">
+                <input type="text" id="videoUrl" placeholder="Paste YouTube URL here (e.g., https://youtu.be/...)">
+                <button onclick="getThumbnail()">Get Thumbnail</button>
+            </div>
+            <p id="error-msg" class="error-msg"></p>
+        </section>
+
+        <section id="result-area" class="result-area hidden">
+            <div class="thumbnail-card">
+                <h3>HD Resolution (1280x720)</h3>
+                <img id="img-max" src="" alt="HD Thumbnail">
+                <a id="btn-max" href="" target="_blank" class="download-btn">Download HD</a>
+            </div>
+            
+            <div class="thumbnail-grid">
+                <div class="thumbnail-card">
+                    <h3>SD Resolution (640x480)</h3>
+                    <img id="img-sd" src="" alt="SD Thumbnail">
+                    <a id="btn-sd" href="" target="_blank" class="download-btn">Download SD</a>
+                </div>
+                <div class="thumbnail-card">
+                    <h3>HQ Resolution (480x360)</h3>
+                    <img id="img-hq" src="" alt="HQ Thumbnail">
+                    <a id="btn-hq" href="" target="_blank" class="download-btn">Download HQ</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="ad-container">
+            <div class="ad-placeholder">Advertisement Space</div>
+        </div>
+
+        <section id="how-it-works" class="content-section">
+            <h2>How to Download YouTube Thumbnails</h2>
+            <ol>
+                <li>Copy the URL of the YouTube video you want.</li>
+                <li>Paste the link into the input box above.</li>
+                <li>Click "Get Thumbnail".</li>
+                <li>Choose your desired resolution and click "Download".</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p>&copy; 2024 YTGrabber. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to personalize content and ads to provide social media features and to analyze our traffic. <a href="privacy.html">Learn more</a>.</p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
