@@ -1,10 +1,10 @@
 # YouTube Thumbnail Grabber | Free HD Thumbnail Downloader
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Secure-green) ![Status](https://img.shields.io/badge/Status-Live-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/javrodr19/thumbnail-grabber)
 ![Platform](https://img.shields.io/badge/platform-web-orange)
 
-**[🔴 LIVE DEMO: Click Here to Use the Tool](https://javrodr19/thumbnail-grabber)**
+**[🔴 LIVE DEMO: Click Here to Use the Tool](https://javrodr19.github.io/thumbnail-grabber/)**
 
 ## 🚀 About The Project
 
@@ -35,9 +35,9 @@ This project is built with **HTML5, CSS3 (Dark Mode), and Vanilla JavaScript**. 
 ## 🛠️ How to Use
 
 1.  **Copy the URL** of the YouTube video (e.g., `https://www.youtube.com/watch?v=dQw4w9WgXcQ`).
-2.  Paste it into the input box on the [website](https://javrodr19/thumbnail-grabber).
+2.  Paste it into the input box on the [website](https://javrodr19.github.io/thumbnail-grabber/).
 3.  Click the **"Get Thumbnail"** button.
-4.  Choose your resolution (HD, SD, or HQ) and click **Download**.
+4.  Choose your desired resolution and click **Download**.
 
 ---
 
@@ -47,7 +47,7 @@ If you want to clone this repository and run it locally or host it yourself:
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/javrodr19/thumbnail-grabber](https://github.com/javrodr19/thumbnail-grabber)
+    git clone [https://github.com/javrodr19/thumbnail-grabber.git](https://github.com/javrodr19/thumbnail-grabber.git)
     ```
 2.  **Navigate to the folder:**
     ```bash
@@ -83,7 +83,7 @@ This tool is for educational and personal use. Please respect the copyright of c
 ---
 
 <p align="center">
-  <a href="https://javrodr19/thumbnail-grabber">
+  <a href="https://javrodr19.github.io/thumbnail-grabber/">
     <b>Start Downloading Thumbnails Now</b>
   </a>
 </p>
