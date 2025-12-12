@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/repo-name)
 ![Platform](https://img.shields.io/badge/platform-web-orange)
 
-**[🔴 LIVE DEMO: Click Here to Use the Tool](https://yourusername.github.io/repo-name/)**
+**[🔴 LIVE DEMO: Click Here to Use the Tool](https://javrodr19/thumbnail-grabber)**
 
 ## 🚀 About The Project
 
@@ -35,7 +35,7 @@ This project is built with **HTML5, CSS3 (Dark Mode), and Vanilla JavaScript**. 
 ## 🛠️ How to Use
 
 1.  **Copy the URL** of the YouTube video (e.g., `https://www.youtube.com/watch?v=dQw4w9WgXcQ`).
-2.  Paste it into the input box on the [website](https://yourusername.github.io/repo-name/).
+2.  Paste it into the input box on the [website](https://javrodr19/thumbnail-grabber).
 3.  Click the **"Get Thumbnail"** button.
 4.  Choose your resolution (HD, SD, or HQ) and click **Download**.
 
@@ -47,11 +47,11 @@ If you want to clone this repository and run it locally or host it yourself:
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/yourusername/repo-name.git](https://github.com/yourusername/repo-name.git)
+    git clone [https://github.com/javrodr19/thumbnail-grabber](https://github.com/javrodr19/thumbnail-grabber)
     ```
 2.  **Navigate to the folder:**
     ```bash
-    cd repo-name
+    cd thumbnail-grabber
     ```
 3.  **Run:** Simply open `index.html` in your browser. No Node.js or backend server is required.
 
@@ -83,7 +83,7 @@ This tool is for educational and personal use. Please respect the copyright of c
 ---
 
 <p align="center">
-  <a href="https://yourusername.github.io/repo-name/">
+  <a href="https://javrodr19/thumbnail-grabber">
     <b>Start Downloading Thumbnails Now</b>
   </a>
 </p>
