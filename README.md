@@ -1,6 +1,6 @@
 # YouTube Thumbnail Grabber | Free HD Thumbnail Downloader
 
-![GitHub license](https://img.shields.io/github/license/javrodr19/thumbnail-grabber)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Secure-green) ![Status](https://img.shields.io/badge/Status-Live-brightgreen)
 ![GitHub last commit](https://img.shields.io/github/last-commit/javrodr19/thumbnail-grabber)
 ![Platform](https://img.shields.io/badge/platform-web-orange)
 
