@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>YouTube Thumbnail Grabber | Download HD Thumbnails Instantly</title>
+    <title>YTGrabber | YouTube Thumbnail Downloader</title>
     <meta name="description" content="Free tool to download YouTube video thumbnails in HD, SD, and HQ. Fast, free, and works on mobile and desktop. No registration required.">
     <meta name="keywords" content="youtube thumbnail downloader, thumbnail grabber, save youtube image, get video cover, youtube seo tool">
     <meta name="robots" content="index, follow">
@@ -12,109 +12,92 @@
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://javrodr19.github.io/thumbnail-grabber/">
-    <meta property="og:title" content="YouTube Thumbnail Grabber - Download HD Images">
-    <meta property="og:description" content="Extract high-quality thumbnails from any YouTube video instantly. Dark mode enabled.">
+    <meta property="og:title" content="YTGrabber - Download HD YouTube Thumbnails">
+    <meta property="og:description" content="Extract high-quality thumbnails from any YouTube video instantly. Terminal-style interface.">
     <meta property="og:image" content="https://javrodr19.github.io/thumbnail-grabber/assets/social-share.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6107685901341616"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>YT<span>Grabber</span></h1>
+            <h1><span class="prompt">$</span> YTGrabber<span class="cursor">_</span></h1>
             <nav>
-                <a href="#how-it-works">How it Works</a>
-                <a href="#faq">FAQ</a>
+                <a href="#how-it-works">> how_it_works</a>
+                <a href="#faq">> faq</a>
             </nav>
         </div>
     </header>
 
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6107685901341616"
-     data-ad-slot="7056249898"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
     <main class="container">
         <section class="tool-section">
-            <h2>Download YouTube Thumbnails</h2>
-            <p>Paste the video URL below to extract high-quality images.</p>
-            
-            <div class="input-group">
-                <input type="text" id="videoUrl" placeholder="Paste YouTube URL here (e.g., https://youtu.be/...)">
-                <button onclick="getThumbnail()">Get Thumbnail</button>
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">thumbnail-grabber</span>
             </div>
-            <p id="error-msg" class="error-msg"></p>
+            <div class="terminal-body">
+                <p class="terminal-line"><span class="prompt">$</span> Enter YouTube URL to extract thumbnails:</p>
+                
+                <div class="input-group">
+                    <span class="prompt">&gt;</span>
+                    <input type="text" id="videoUrl" placeholder="https://youtu.be/...">
+                    <button onclick="getThumbnail()">EXECUTE</button>
+                </div>
+                <p id="error-msg" class="error-msg"></p>
+            </div>
         </section>
 
         <section id="result-area" class="result-area hidden">
-            <div class="thumbnail-card">
-                <h3>HD Resolution (1280x720)</h3>
+            <div class="output-header">
+                <span class="prompt">$</span> OUTPUT: Thumbnails extracted successfully
+            </div>
+            
+            <div class="thumbnail-card main-card">
+                <h3><span class="bracket">[</span>HD<span class="bracket">]</span> maxresdefault.jpg <span class="dim">(1280x720)</span></h3>
                 <img id="img-max" src="" alt="HD Thumbnail">
-                <a id="btn-max" href="" target="_blank" class="download-btn">Download HD</a>
+                <a id="btn-max" href="" target="_blank" class="download-btn">> download_hd</a>
             </div>
             
             <div class="thumbnail-grid">
                 <div class="thumbnail-card">
-                    <h3>SD Resolution (640x480)</h3>
+                    <h3><span class="bracket">[</span>SD<span class="bracket">]</span> sddefault.jpg <span class="dim">(640x480)</span></h3>
                     <img id="img-sd" src="" alt="SD Thumbnail">
-                    <a id="btn-sd" href="" target="_blank" class="download-btn">Download SD</a>
+                    <a id="btn-sd" href="" target="_blank" class="download-btn">> download_sd</a>
                 </div>
                 <div class="thumbnail-card">
-                    <h3>HQ Resolution (480x360)</h3>
+                    <h3><span class="bracket">[</span>HQ<span class="bracket">]</span> hqdefault.jpg <span class="dim">(480x360)</span></h3>
                     <img id="img-hq" src="" alt="HQ Thumbnail">
-                    <a id="btn-hq" href="" target="_blank" class="download-btn">Download HQ</a>
+                    <a id="btn-hq" href="" target="_blank" class="download-btn">> download_hq</a>
                 </div>
             </div>
         </section>
-        
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6107685901341616"
-     data-ad-slot="7056249898"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
 
         <section id="how-it-works" class="content-section">
-            <h2>How to Download YouTube Thumbnails</h2>
-            <ol>
-                <li>Copy the URL of the YouTube video you want.</li>
-                <li>Paste the link into the input box above.</li>
-                <li>Click "Get Thumbnail".</li>
-                <li>Choose your desired resolution and click "Download".</li>
-            </ol>
+            <h2><span class="prompt">$</span> cat how_it_works.txt</h2>
+            <div class="instructions-output">
+                <p><span class="line-num">1.</span> Copy the URL of the YouTube video</p>
+                <p><span class="line-num">2.</span> Paste the link into the input field</p>
+                <p><span class="line-num">3.</span> Click "EXECUTE"</p>
+                <p><span class="line-num">4.</span> Download your preferred resolution</p>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">> privacy.md</a>
+                <a href="terms.html">> terms.md</a>
             </div>
-            <p>&copy; 2024 YTGrabber. All rights reserved.</p>
+            <p class="copyright"><span class="dim"># © 2024 YTGrabber. MIT License.</span></p>
         </div>
     </footer>
-
-    <div id="cookie-banner" class="cookie-banner">
-        <p>We use cookies to personalize content and ads to provide social media features and to analyze our traffic. <a href="privacy.html">Learn more</a>.</p>
-        <button id="accept-cookies">Accept</button>
-    </div>
 
     <script src="script.js"></script>
 </body>

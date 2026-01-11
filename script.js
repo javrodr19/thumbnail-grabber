@@ -10,7 +10,7 @@ function getThumbnail() {
     const inputUrl = document.getElementById('videoUrl').value;
     const errorMsg = document.getElementById('error-msg');
     const resultArea = document.getElementById('result-area');
-    
+
     // Reset display
     errorMsg.innerText = "";
     resultArea.classList.add('hidden');
@@ -18,7 +18,7 @@ function getThumbnail() {
     const videoId = getYouTubeID(inputUrl);
 
     if (!videoId) {
-        errorMsg.innerText = "Invalid YouTube URL. Please try again.";
+        errorMsg.innerText = "[ERROR] Invalid YouTube URL. Please try again.";
         return;
     }
 
@@ -36,19 +36,19 @@ function getThumbnail() {
     const btnHq = document.getElementById('btn-hq');
 
     // 1. Try to load HD. If it fails (404), fallback to HQ automatically
-    imgMax.onload = function() {
+    imgMax.onload = function () {
         // Image loaded successfully, ensure button is correct
         btnMax.href = maxRes;
-        btnMax.innerText = "Download HD";
+        btnMax.innerText = "> download_hd";
     };
-    
-    imgMax.onerror = function() {
+
+    imgMax.onerror = function () {
         // HD failed, switch to HQ
         this.src = hqRes;
         btnMax.href = hqRes;
-        btnMax.innerText = "Download HQ (HD Unavailable)";
+        btnMax.innerText = "> download_hq (hd_unavailable)";
     };
-    
+
     // Trigger load
     imgMax.src = maxRes;
     btnMax.href = maxRes; // Default link
@@ -64,18 +64,12 @@ function getThumbnail() {
     resultArea.classList.remove('hidden');
 }
 
-// Cookie Consent Logic
-document.addEventListener("DOMContentLoaded", function() {
-    const cookieBanner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
-
-    // Check if user already accepted
-    if (!localStorage.getItem('cookiesAccepted')) {
-        cookieBanner.style.display = 'block';
-    }
-
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookiesAccepted', 'true');
-        cookieBanner.style.display = 'none';
+// Allow Enter key to submit
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById('videoUrl');
+    input.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            getThumbnail();
+        }
     });
 });
